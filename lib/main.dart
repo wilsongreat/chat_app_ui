@@ -12,9 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter chat UI',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.red,
+        primarySwatch: Colors.red, // ignore: deprecated_member_use
+        accentColor: Color(0xFFFEF9EB),
       ),
       home: HomeScreen(),
     );

@@ -1,4 +1,4 @@
-import 'package:flutter_chat_ui_starter/models/user_model.dart';
+import 'package:flutterchat_app/models/user_model.dart';
 
 class Message {
   final User sender;
@@ -9,30 +9,45 @@ class Message {
   final bool unread;
 
   Message({
-    this.sender,
-    this.time,
-    this.text,
-    this.isLiked,
-    this.unread,
+    required this.sender,
+    required this.time,
+    required this.text,
+    required this.isLiked,
+    required this.unread,
   });
 }
 
 // YOU - current user
-final User currentUser =
-    User(id: 0, name: 'Current User', imageUrl: 'assets/images/greg.jpg');
+final User currentUser = User(
+    id: 0,
+    name: 'Current User',
+    imageUrl: 'assets/images/greg.jpg',
+    isOnline: true);
 
 // USERS
-final User greg = User(id: 1, name: 'Greg', imageUrl: 'assets/images/greg.jpg');
-final User james =
-    User(id: 2, name: 'James', imageUrl: 'assets/images/james.jpg');
-final User john = User(id: 3, name: 'John', imageUrl: 'assets/images/john.jpg');
-final User olivia =
-    User(id: 4, name: 'Olivia', imageUrl: 'assets/images/olivia.jpg');
-final User sam = User(id: 5, name: 'Sam', imageUrl: 'assets/images/sam.jpg');
-final User sophia =
-    User(id: 6, name: 'Sophia', imageUrl: 'assets/images/sophia.jpg');
-final User steven =
-    User(id: 7, name: 'Steven', imageUrl: 'assets/images/steven.jpg');
+final User greg = User(
+    id: 1, name: 'Greg', imageUrl: 'assets/images/greg.jpg', isOnline: false);
+final User james = User(
+    id: 2, name: 'James', imageUrl: 'assets/images/james.jpg', isOnline: false);
+final User john = User(
+    id: 3, name: 'John', imageUrl: 'assets/images/john.jpg', isOnline: false);
+final User olivia = User(
+    id: 4,
+    name: 'Olivia',
+    imageUrl: 'assets/images/olivia.jpg',
+    isOnline: true);
+final User sam =
+    User(id: 5, name: 'Sam', imageUrl: 'assets/images/sam.jpg', isOnline: true);
+final User sophia = User(
+    id: 6,
+    name: 'Sophia',
+    imageUrl: 'assets/images/sophia.jpg',
+    isOnline: true);
+final User steven = User(
+    id: 7,
+    name: 'Steven',
+    imageUrl: 'assets/images/steven.jpg',
+    isOnline: false);
 
 // FAVORITE CONTACTS
 List<User> favorites = [sam, steven, olivia, john, greg];
